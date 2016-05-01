@@ -1,0 +1,117 @@
+<%= form_for(@character) do |f| %>
+  <% if @character.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@character.errors.count, "error") %> prohibited this character from being saved:</h2>
+
+      <ul>
+      <% @character.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.number_field :weight, :step => 0.01 %>
+  </div>
+  <div class="field">
+    <%= f.label :weight_rank %><br>
+    <%= f.number_field :weight_rank %>
+  </div>
+  <div class="field">
+    <%= f.label :run_speed %><br>
+    <%= f.number_field :run_speed, :step => 0.01 %>
+  </div>
+  <div class="field">
+    <%= f.label :run_speed_rank %><br>
+    <%= f.number_field :run_speed_rank %>
+  </div>
+  <div class="field">
+    <%= f.label :walk_speed %><br>
+    <%= f.number_field :walk_speed, :step => 0.01%>
+  </div>
+  <div class="field">
+    <%= f.label :walk_speed_rank %><br>
+    <%= f.number_field :walk_speed_rank, :step => 0.01 %>
+  </div>
+  <div class="field">
+    <%= f.label :air_speed %><br>
+    <%= f.number_field :air_speed, :step => 0.01 %>
+  </div>
+  <div class="field">
+    <%= f.label :air_speed_rank %><br>
+    <%= f.number_field :air_speed_rank, :step => 0.01 %>
+  </div>
+  <div class="field">
+    <%= f.label :fall_speed %><br>
+    <%= f.number_field :fall_speed, :step => 0.01 %>
+  </div>
+  <div class="field">
+    <%= f.label :fall_speed_rank %><br>
+    <%= f.number_field :fall_speed_rank %>
+  </div>
+  <div class="field">
+    <%= f.label :fast_fall_speed %><br>
+    <%= f.number_field :fast_fall_speed, :step => 0.01 %>
+  </div>
+  <div class="field">
+    <%= f.label :fast_fall_speed_rank %><br>
+    <%= f.number_field :fast_fall_speed_rank%>
+  </div>
+  <div class="field">
+    <%= f.label :air_acceleration %><br>
+    <%= f.number_field :air_acceleration, :step => 0.01 %>
+  </div>
+  <div class="field">
+    <%= f.label :gravity %><br>
+    <%= f.number_field :gravity, :step => 0.01 %>
+  </div>
+  <div class="field">
+    <%= f.label :sh_air_time %><br>
+    <%= f.number_field :sh_air_time, :step => 0.01 %>
+  </div>
+  <div class="field">
+    <%= f.label :max_jump %><br>
+    <%= f.number_field :max_jump %>
+  </div>
+  <div class="field">
+    <%= f.label :wall_jump %><br>
+    <%= f.check_box :wall_jump %>
+  </div>
+  <div class="field">
+    <%= f.label :wall_cling %><br>
+    <%= f.check_box :wall_cling %>
+  </div>
+  <div class="field">
+    <%= f.label :crawl %><br>
+    <%= f.check_box :crawl %>
+  </div>
+  <div class="field">
+    <%= f.label :tether %><br>
+    <%= f.check_box :tether %>
+  </div>
+  <div class="field">
+    <%= f.label :jump_sqaut %><br>
+    <%= f.number_field :jump_sqaut %>
+  </div>
+  <div class="field">
+    <%= f.label :soft_landing_lag %><br>
+    <%= f.number_field :soft_landing_lag %>
+  </div>
+  <div class="field">
+    <%= f.label :hard_landing_lag %><br>
+    <%= f.number_field :hard_landing_lag %>
+  </div>
+  <div class="field">
+    <%= f.label :fh_air_time %><br>
+    <%= f.number_field :fh_air_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

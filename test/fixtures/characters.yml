@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  weight: MyString
+  weight_rank: 1
+  run_speed: 1
+  run_speed_rank: 1
+  walk_speed: 1
+  walk_speed_rank: 1
+  air_speed: 1
+  air_speed_rank: 1
+  fall_speed: 1
+  fall_speed_rank: 1
+  fast_fall_speed: 1
+  fast_fall_speed_rank: 1
+  air_acceleration: 1
+  gravity: 1
+  sh_air_time: 1
+  max_jump: 1
+  wall_jump: false
+  wall_cling: false
+  crawl: false
+  tether: false
+  jump_sqaut: 1
+  soft_landing_lag: 1
+  hard_landing_lag: 1
+  fh_air_time: 1
+
+two:
+  name: MyString
+  weight: MyString
+  weight_rank: 1
+  run_speed: 1
+  run_speed_rank: 1
+  walk_speed: 1
+  walk_speed_rank: 1
+  air_speed: 1
+  air_speed_rank: 1
+  fall_speed: 1
+  fall_speed_rank: 1
+  fast_fall_speed: 1
+  fast_fall_speed_rank: 1
+  air_acceleration: 1
+  gravity: 1
+  sh_air_time: 1
+  max_jump: 1
+  wall_jump: false
+  wall_cling: false
+  crawl: false
+  tether: false
+  jump_sqaut: 1
+  soft_landing_lag: 1
+  hard_landing_lag: 1
+  fh_air_time: 1

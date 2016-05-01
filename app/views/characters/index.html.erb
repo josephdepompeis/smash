@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Characters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Weight</th>
+      <th>Weight rank</th>
+      <th>Run speed</th>
+      <th>Run speed rank</th>
+      <th>Walk speed</th>
+      <th>Walk speed rank</th>
+      <th>Air speed</th>
+      <th>Air speed rank</th>
+      <th>Fall speed</th>
+      <th>Fall speed rank</th>
+      <th>Fast fall speed</th>
+      <th>Fast fall speed rank</th>
+      <th>Air acceleration</th>
+      <th>Gravity</th>
+      <th>Sh air time</th>
+      <th>Max jump</th>
+      <th>Wall jump</th>
+      <th>Wall cling</th>
+      <th>Crawl</th>
+      <th>Tether</th>
+      <th>Jump sqaut</th>
+      <th>Soft landing lag</th>
+      <th>Hard landing lag</th>
+      <th>Fh air time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @characters.each do |character| %>
+      <tr>
+        <td><%= character.name %></td>
+        <td><%= character.weight %></td>
+        <td><%= character.weight_rank %></td>
+        <td><%= character.run_speed %></td>
+        <td><%= character.run_speed_rank %></td>
+        <td><%= character.walk_speed %></td>
+        <td><%= character.walk_speed_rank %></td>
+        <td><%= character.air_speed %></td>
+        <td><%= character.air_speed_rank %></td>
+        <td><%= character.fall_speed %></td>
+        <td><%= character.fall_speed_rank %></td>
+        <td><%= character.fast_fall_speed %></td>
+        <td><%= character.fast_fall_speed_rank %></td>
+        <td><%= character.air_acceleration %></td>
+        <td><%= character.gravity %></td>
+        <td><%= character.sh_air_time %></td>
+        <td><%= character.max_jump %></td>
+        <td><%= character.wall_jump %></td>
+        <td><%= character.wall_cling %></td>
+        <td><%= character.crawl %></td>
+        <td><%= character.tether %></td>
+        <td><%= character.jump_sqaut %></td>
+        <td><%= character.soft_landing_lag %></td>
+        <td><%= character.hard_landing_lag %></td>
+        <td><%= character.fh_air_time %></td>
+        <td><%= link_to 'Show', character %></td>
+        <td><%= link_to 'Edit', edit_character_path(character) %></td>
+        <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Character', new_character_path %>
