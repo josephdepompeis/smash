@@ -1,0 +1,41 @@
+<%= form_for(@grab) do |f| %>
+  <% if @grab.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@grab.errors.count, "error") %> prohibited this grab from being saved:</h2>
+
+      <ul>
+      <% @grab.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :character_id %><br>
+    <%= f.number_field :character_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :hitbox_active_start %><br>
+    <%= f.number_field :hitbox_active_start %>
+  </div>
+  <div class="field">
+    <%= f.label :hitbox_active_end %><br>
+    <%= f.number_field :hitbox_active_end %>
+  </div>
+  <div class="field">
+    <%= f.label :first_actionable_frame %><br>
+    <%= f.number_field :first_actionable_frame %>
+  </div>
+  <div class="field">
+    <%= f.label :variation_of %><br>
+    <%= f.number_field :variation_of %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

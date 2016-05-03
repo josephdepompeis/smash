@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Grabs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Character</th>
+      <th>Name</th>
+      <th>Hitbox active start</th>
+      <th>Hitbox active end</th>
+      <th>First actionable frame</th>
+      <th>Variation of</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grabs.each do |grab| %>
+      <tr>
+        <td><%= grab.character_id %></td>
+        <td><%= grab.name %></td>
+        <td><%= grab.hitbox_active_start %></td>
+        <td><%= grab.hitbox_active_end %></td>
+        <td><%= grab.first_actionable_frame %></td>
+        <td><%= grab.variation_of %></td>
+        <td><%= link_to 'Show', grab %></td>
+        <td><%= link_to 'Edit', edit_grab_path(grab) %></td>
+        <td><%= link_to 'Destroy', grab, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Grab', new_grab_path %>

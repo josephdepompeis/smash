@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :grabs
   resources :ground_moves
   resources :characters
   # The priority is based upon order of creation: first created -> highest priority.

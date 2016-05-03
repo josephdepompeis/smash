@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  character_id: 1
+  name: MyString
+  hitbox_active_start: 1
+  hitbox_active_end: 1
+  first_actionable_frame: 1
+  variation_of: 1
+
+two:
+  character_id: 1
+  name: MyString
+  hitbox_active_start: 1
+  hitbox_active_end: 1
+  first_actionable_frame: 1
+  variation_of: 1

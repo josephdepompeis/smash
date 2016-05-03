@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Character:</strong>
+  <%= @grab.character_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @grab.name %>
+</p>
+
+<p>
+  <strong>Hitbox active start:</strong>
+  <%= @grab.hitbox_active_start %>
+</p>
+
+<p>
+  <strong>Hitbox active end:</strong>
+  <%= @grab.hitbox_active_end %>
+</p>
+
+<p>
+  <strong>First actionable frame:</strong>
+  <%= @grab.first_actionable_frame %>
+</p>
+
+<p>
+  <strong>Variation of:</strong>
+  <%= @grab.variation_of %>
+</p>
+
+<%= link_to 'Edit', edit_grab_path(@grab) %> |
+<%= link_to 'Back', grabs_path %>

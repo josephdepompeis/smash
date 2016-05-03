@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160501052717) do
+ActiveRecord::Schema.define(version: 20160503030954) do
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
@@ -42,6 +42,17 @@ ActiveRecord::Schema.define(version: 20160501052717) do
     t.decimal  "patch_update"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+  end
+
+  create_table "grabs", force: :cascade do |t|
+    t.integer  "character_id"
+    t.string   "name"
+    t.integer  "hitbox_active_start"
+    t.integer  "hitbox_active_end"
+    t.integer  "first_actionable_frame"
+    t.integer  "variation_of"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "ground_moves", force: :cascade do |t|
