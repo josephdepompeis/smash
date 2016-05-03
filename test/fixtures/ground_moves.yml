@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  hitbox_active_start: 1
+  hotbox_active_end: 1
+  first_actionable_frame: 1
+  base_damage: 9.99
+  angle: 1
+  base_knockback: 1
+  weight_based_knockback: 1
+  knock: MyString
+  back_growth: 1
+  notes: MyString
+  patch: 9.99
+  variation_of: 1
+
+two:
+  name: MyString
+  hitbox_active_start: 1
+  hotbox_active_end: 1
+  first_actionable_frame: 1
+  base_damage: 9.99
+  angle: 1
+  base_knockback: 1
+  weight_based_knockback: 1
+  knock: MyString
+  back_growth: 1
+  notes: MyString
+  patch: 9.99
+  variation_of: 1

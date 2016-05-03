@@ -1,0 +1,76 @@
+<%= form_for(@ground_move) do |f| %>
+  <% if @ground_move.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ground_move.errors.count, "error") %> prohibited this ground_move from being saved:</h2>
+
+      <ul>
+      <% @ground_move.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :character_id %><br>
+    <%= f.number_field :character_id %>
+  </div>
+
+
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :hitbox_active_start %><br>
+    <%= f.number_field :hitbox_active_start %>
+  </div>
+  <div class="field">
+    <%= f.label :hotbox_active_end %><br>
+    <%= f.number_field :hotbox_active_end %>
+  </div>
+  <div class="field">
+    <%= f.label :first_actionable_frame %><br>
+    <%= f.number_field :first_actionable_frame %>
+  </div>
+  <div class="field">
+    <%= f.label :base_damage %><br>
+    <%= f.text_field :base_damage %>
+  </div>
+  <div class="field">
+    <%= f.label :angle %><br>
+    <%= f.number_field :angle %>
+  </div>
+  <div class="field">
+    <%= f.label :base_knockback %><br>
+    <%= f.number_field :base_knockback %>
+  </div>
+  <div class="field">
+    <%= f.label :weight_based_knockback %><br>
+    <%= f.number_field :weight_based_knockback %>
+  </div>
+  <div class="field">
+    <%= f.label :knock %><br>
+    <%= f.text_field :knock %>
+  </div>
+  <div class="field">
+    <%= f.label :back_growth %><br>
+    <%= f.number_field :back_growth %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :patch %><br>
+    <%= f.text_field :patch %>
+  </div>
+  <div class="field">
+    <%= f.label :variation_of %><br>
+    <%= f.number_field :variation_of %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

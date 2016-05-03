@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Character_id:</strong>
+  <%= @ground_move.character_id %>
+</p>
+
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @ground_move.name %>
+</p>
+
+<p>
+  <strong>Hitbox active start:</strong>
+  <%= @ground_move.hitbox_active_start %>
+</p>
+
+<p>
+  <strong>Hotbox active end:</strong>
+  <%= @ground_move.hotbox_active_end %>
+</p>
+
+<p>
+  <strong>First actionable frame:</strong>
+  <%= @ground_move.first_actionable_frame %>
+</p>
+
+<p>
+  <strong>Base damage:</strong>
+  <%= @ground_move.base_damage %>
+</p>
+
+<p>
+  <strong>Angle:</strong>
+  <%= @ground_move.angle %>
+</p>
+
+<p>
+  <strong>Base knockback:</strong>
+  <%= @ground_move.base_knockback %>
+</p>
+
+<p>
+  <strong>Weight based knockback:</strong>
+  <%= @ground_move.weight_based_knockback %>
+</p>
+
+<p>
+  <strong>Knock:</strong>
+  <%= @ground_move.knock %>
+</p>
+
+<p>
+  <strong>Back growth:</strong>
+  <%= @ground_move.back_growth %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @ground_move.notes %>
+</p>
+
+<p>
+  <strong>Patch:</strong>
+  <%= @ground_move.patch %>
+</p>
+
+<p>
+  <strong>Variation of:</strong>
+  <%= @ground_move.variation_of %>
+</p>
+
+<%= link_to 'Edit', edit_ground_move_path(@ground_move) %> |
+<%= link_to 'Back', ground_moves_path %>

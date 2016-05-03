@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ground Moves</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Character_id</th>
+      <th>Name</th>
+      <th>Hitbox active start</th>
+      <th>Hotbox active end</th>
+      <th>First actionable frame</th>
+      <th>Base damage</th>
+      <th>Angle</th>
+      <th>Base knockback</th>
+      <th>Weight based knockback</th>
+      <th>Knock</th>
+      <th>Back growth</th>
+      <th>Notes</th>
+      <th>Patch</th>
+      <th>Variation of</th>
+      <th colspan="9"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ground_moves.each do |ground_move| %>
+      <tr>
+        <td><%= ground_move.character_id %></td>
+        <td><%= ground_move.name %></td>
+        <td><%= ground_move.hitbox_active_start %></td>
+        <td><%= ground_move.hotbox_active_end %></td>
+        <td><%= ground_move.first_actionable_frame %></td>
+        <td><%= ground_move.base_damage %></td>
+        <td><%= ground_move.angle %></td>
+        <td><%= ground_move.base_knockback %></td>
+        <td><%= ground_move.weight_based_knockback %></td>
+        <td><%= ground_move.knock %></td>
+        <td><%= ground_move.back_growth %></td>
+        <td><%= ground_move.notes %></td>
+        <td><%= ground_move.patch %></td>
+        <td><%= ground_move.variation_of %></td>
+        <td><%= link_to 'Show', ground_move %></td>
+        <td><%= link_to 'Edit', edit_ground_move_path(ground_move) %></td>
+        <td><%= link_to 'Destroy', ground_move, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ground move', new_ground_move_path %>

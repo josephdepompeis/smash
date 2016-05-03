@@ -1,0 +1,1 @@
+json.extract! @ground_move, :id, :name, :hitbox_active_start, :hotbox_active_end, :first_actionable_frame, :base_damage, :angle, :base_knockback, :weight_based_knockback, :knock, :back_growth, :notes, :patch, :variation_of, :created_at, :updated_at
