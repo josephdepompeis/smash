@@ -10,7 +10,7 @@ class MatchTest < ActiveSupport::TestCase
     char1 = Character.create!(name: "johnson")
     char2 = Character.create!(name: "mikeY")
     match1 = Match.create!(name: "match1", playing_as: char1.id, playing_against: char2.id)
-    
+
     assert_equal  match1.playing_as, char1.id
     assert_equal  match1.playing_against, char2.id
     assert_equal match1.characters.first.id, char1.id
@@ -27,5 +27,9 @@ class MatchTest < ActiveSupport::TestCase
     assert_equal  match1.playing_as, char1.id
     assert_equal match2.id, nil
   end
+
+
+
+
 
 end

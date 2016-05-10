@@ -4,4 +4,13 @@ class Character < ActiveRecord::Base
 
 
 
+  def playing_as
+    Match.where(playing_as: self.id)
+  end
+
+  def playing_against
+    Match.where(playing_against: self.id)
+  end
+
+
 end
