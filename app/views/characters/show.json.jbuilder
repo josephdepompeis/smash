@@ -9,6 +9,15 @@ end
 json.grabs  @character.grabs.each do |grab|
   # json.name grab.name
   json.extract! grab, :id, :character_id, :name, :hitbox_active_start, :hitbox_active_end, :first_actionable_frame, :variation_of, :created_at, :updated_at
+end
 
 
+json.matches  @character.playing_as.each do |match|
+  # json.name grab.name
+  json.extract! match, :id, :name, :playing_as, :playing_against, :user_id, :created_at, :updated_at
+end
+
+json.against  @character.playing_against.each do |match|
+  # json.name grab.name
+  json.extract! match, :id, :name, :playing_as, :playing_against, :user_id, :created_at, :updated_at
 end
