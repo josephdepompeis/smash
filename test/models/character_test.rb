@@ -41,7 +41,6 @@ class CharacterTest < ActiveSupport::TestCase
     assert_equal char2.playing_against.first.id, match1.id
     assert_equal char2.playing_against.second.id, match2.id
     assert_equal char2.playing_against.third.id, match3.id
-    byebug
   end
 
 
