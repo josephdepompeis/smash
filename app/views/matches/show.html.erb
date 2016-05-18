@@ -7,12 +7,13 @@
 
 <p>
   <strong>Playing as:</strong>
-  <%= @match.playing_as %>
+<%= Character.find(@match.playing_as).name %>
 </p>
 
 <p>
   <strong>Playing against:</strong>
-  <%= @match.playing_against %>
+  <%= Character.find(@match.playing_against).name %>
+
 </p>
 
 <p>
