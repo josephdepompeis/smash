@@ -5,11 +5,11 @@ class MatchesControllerTest < ActionController::TestCase
     @match = matches(:one)
   end
 
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:matches)
-  end
+  # test "should get index" do
+  #   get :index
+  #   assert_response :success
+  #   assert_not_nil assigns(:matches)
+  # end
 
   test "should get new" do
     get :new
@@ -23,11 +23,11 @@ class MatchesControllerTest < ActionController::TestCase
 
     assert_redirected_to match_path(assigns(:match))
   end
-
-  test "should show match" do
-    get :show, id: @match
-    assert_response :success
-  end
+  # 
+  # test "should show match" do
+  #   get :show, id: @match
+  #   assert_response :success
+  # end
 
   test "should get edit" do
     get :edit, id: @match

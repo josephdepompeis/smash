@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @note.name %>
+</p>
+
+<p>
+  <strong>Match:</strong>
+  <%= @note.match_id %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @note.order %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @note.section %>
+</p>
+
+<p>
+  <strong>Video url:</strong>
+  <%= @note.video_url %>
+</p>
+
+<p>
+  <strong>Img url:</strong>
+  <%= @note.img_url %>
+</p>
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>

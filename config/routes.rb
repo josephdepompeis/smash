@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :notes
   resources :matches
   resources :grabs
   resources :ground_moves
