@@ -125,5 +125,81 @@
   <%= @character.fh_air_time %>
 </p>
 
+
+<br>
+<br>
+
+<p> PLAYING AS </p>
+
+<br>
+
+
+<% @character.playing_as.each do |match| %>
+
+  <p>
+    <strong>Name:</strong>
+    <%= match.name %>
+  </p>
+
+  <p>
+    <strong>Playing as:</strong>
+    <td><%= Character.find(match.playing_as).name %></td>
+
+  </p>
+
+  <p>
+    <strong>Playing against:</strong>
+    <%= Character.find(match.playing_against).name %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= match.user_id %>
+  </p>
+
+<% end %>
+
+<br>
+<br>
+<br>
+
+<p> PLAYING AGAINST </p>
+<% @character.playing_against.each do |match| %>
+
+  <p>
+    <strong>Name:</strong>
+    <%= match.name %>
+  </p>
+
+  <p>
+    <strong>Playing as:</strong>
+    <td><%= Character.find(match.playing_as).name %></td>
+
+  </p>
+
+  <p>
+    <strong>Playing against:</strong>
+    <%= Character.find(match.playing_against).name %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= match.user_id %>
+  </p>
+<br>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <%= link_to 'Edit', edit_character_path(@character) %> |
 <%= link_to 'Back', characters_path %>

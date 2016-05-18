@@ -17,8 +17,8 @@
     <% @matches.each do |match| %>
       <tr>
         <td><%= match.name %></td>
-        <td><%= match.playing_as %></td>
-        <td><%= match.playing_against %></td>
+        <td><%= Character.find(match.playing_as).name %></td>
+        <td><%= Character.find(match.playing_against).name %></td>
         <td><%= match.user_id %></td>
         <td><%= link_to 'Show', match %></td>
         <td><%= link_to 'Edit', edit_match_path(match) %></td>
