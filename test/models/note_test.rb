@@ -33,11 +33,9 @@ class NoteTest < ActiveSupport::TestCase
     note1 = Note.create!(name: "note1", match_id:match1.id, section: match1.playing_as)
     # note2 is missing match id
     note2 = Note.create(name: "note2", section: match1.playing_as)
-    
+
     assert_equal note1.match.id, match1.id
     assert_equal  nil, note2.id
-
-
   end
 
 
