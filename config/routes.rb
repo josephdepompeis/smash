@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :characters
 
 
-
+  get 'dashboards/index'
 
   get 'sessions/login'
   post 'sessions/login'
