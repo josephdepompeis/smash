@@ -10,6 +10,14 @@ class MatchesController < ApplicationController
   # GET /matches/1
   # GET /matches/1.json
   def show
+
+    @playing_as = Character.find(@match.playing_as)
+    @playing_against = Character.find(@match.playing_against)
+    @new_note = Note.new
+
+
+
+
   end
 
   # GET /matches/new
