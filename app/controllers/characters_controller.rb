@@ -1,7 +1,5 @@
 class CharactersController < ApplicationController
   before_action :set_character, only: [:show, :edit, :update, :destroy]
-
-
   after_action :set_access_control_headers
 
 
