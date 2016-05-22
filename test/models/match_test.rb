@@ -28,6 +28,16 @@ class MatchTest < ActiveSupport::TestCase
     assert_equal match2.id, nil
   end
 
+  test "Matches have playing_as notes" do
+    char1 = Character.create!(name: "johnson")
+    char2 = Character.create!(name: "mikeY")
+    match1 = Match.create!(name: "match1", playing_as: char1.id, playing_against: char2.id)
+    note1 = Note.create!(name: "note", match_id:match1.id, section: "playing_as")
+    note2 = Note.create!(name: "note", match_id:match1.id, section: "playing_against")
+
+    assert_equal  match1.playing_as_notes.first, note1
+  end
+
 
 
 
