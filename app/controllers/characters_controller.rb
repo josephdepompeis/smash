@@ -1,7 +1,7 @@
 class CharactersController < ApplicationController
   before_action :set_character, only: [:show, :edit, :update, :destroy]
   after_action :set_access_control_headers
-
+  skip_before_action :verify_authenticity_token
 
 
 
@@ -75,12 +75,22 @@ class CharactersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def character_params
+
       params.require(:character).permit(:name, :weight, :weight_rank, :run_speed, :run_speed_rank, :walk_speed, :walk_speed_rank, :air_speed, :air_speed_rank, :fall_speed, :fall_speed_rank, :fast_fall_speed, :fast_fall_speed_rank, :air_acceleration, :gravity, :sh_air_time, :max_jump, :wall_jump, :wall_cling, :crawl, :tether, :jump_sqaut, :soft_landing_lag, :hard_landing_lag, :fh_air_time)
     end
 
     def set_access_control_headers
-      headers['Access-Control-Allow-Origin'] = "*"
-      headers['Access-Control-Request-Method'] = %w{GET POST OPTIONS}.join(",")
+      # headers['Access-Control-Allow-Origin'] = "*"
+      # headers['Access-Control-Request-Method'] = %w{GET POST OPTIONS}.join(",")
+      headers['Access-Control-Allow-Origin'] = '*'
+      headers['Access-Control-Allow-Methods'] = 'POST, PUT, DELETE, GET, OPTIONS'
+      headers['Access-Control-Request-Method'] = '*'
+      headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+
+
+
+
+
     end
 
 

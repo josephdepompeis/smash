@@ -9,3 +9,6 @@
 
 
 character1 = Character.create(name: "Zero Suit Samus")
+character2 = Character.create(name: "Mario")
+character2 = Character.create(name: "Luigi")
+character2 = Character.create(name: "Benjamin")
