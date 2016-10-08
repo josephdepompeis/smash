@@ -28,7 +28,9 @@ class NotesController < ApplicationController
 
     respond_to do |format|
       if @note.save
-        format.html { redirect_to Match.find(@note.match_id), notice: 'Note was successfully created.' }
+        format.html { render json: @note, notice: 'Note was successfully created.' }
+
+        # format.html { redirect_to Match.find(@note.match_id), notice: 'Note was successfully created.' }
         format.json { render :show, status: :created, location: @note }
       else
         format.html { render :new }
